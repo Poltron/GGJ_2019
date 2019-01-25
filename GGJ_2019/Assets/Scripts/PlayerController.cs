@@ -5,17 +5,23 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float Speed;
+    private Rigidbody _rigidBody;
 
-    private Vector2 velocity;
+    private void Awake()
+    {
+        _rigidBody = GetComponent<Rigidbody>();
+    }
 
-	void Start ()
+    void Start ()
     {
 		
 	}
-	
-	void Update ()
+
+    private void FixedUpdate()
     {
-		if (Input.GetKey(KeyCode.Z))
+        Vector2 velocity = new Vector2();
+
+        if (Input.GetKey(KeyCode.Z))
         {
             velocity.y += 1;
         }
@@ -43,8 +49,9 @@ public class PlayerController : MonoBehaviour
 
         velocity.Normalize();
 
-        Vector3 movement = new Vector3(velocity.x, 0, velocity.y);
+        Vector3 movement = new Vector3(velocity.x, 0, velocity.y) * Speed * Time.deltaTime;
 
-        transform.position += movement * Speed * Time.deltaTime;
-	}
+        _rigidBody.velocity = Vector3.zero;
+        _rigidBody.AddForce(movement);
+    }
 }
