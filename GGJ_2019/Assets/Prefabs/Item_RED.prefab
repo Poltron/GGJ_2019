@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 114451219277684340}
   - component: {fileID: 82456697596950456}
   m_Layer: 0
-  m_Name: Objet_RED
+  m_Name: Item_RED
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
