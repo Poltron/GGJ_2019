@@ -47,7 +47,7 @@ public class GameManager : Singleton<GameManager>
                 StartGame();
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && gameState == GameState.Playing)
+        if (Input.GetKeyDown(KeyCode.Escape) && gameState == GameState.Playing && Time.timeScale != 0)
         {
             PauseGame();
         }
@@ -66,6 +66,15 @@ public class GameManager : Singleton<GameManager>
 
     public void PauseGame()
     {
+        Time.timeScale = 0;
+
+        m_UI.ShowHidePauseCanvas();
+    }
+
+    public void UnpauseGame()
+    {
+        Time.timeScale = 1;
+
         m_UI.ShowHidePauseCanvas();
     }
 
