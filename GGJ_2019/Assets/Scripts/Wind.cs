@@ -5,6 +5,7 @@ using UnityEngine;
 public class Wind : MonoBehaviour
 {
     [SerializeField] private float Speed;
+    [SerializeField] private float TimeBeforeDestroy;
 
     private void Start()
     {
@@ -12,5 +13,13 @@ public class Wind : MonoBehaviour
         {
             gitan.Speed = Speed;
         }
+
+        StartCoroutine(timeBeforeDestroy(TimeBeforeDestroy));
+    }
+
+    private IEnumerator timeBeforeDestroy(float t)
+    {
+        yield return new WaitForSeconds(t);
+        Destroy(gameObject);
     }
 }
