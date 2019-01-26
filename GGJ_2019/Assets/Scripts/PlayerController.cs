@@ -23,12 +23,16 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 m_Velocity;
 
+    private PlayerSounds m_PlayerSounds;
+
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();
         _transform = transform;
 
         items = new List<Item>();
+
+        m_PlayerSounds = gameObject.GetComponent<PlayerSounds>();
     }
 
     public void AddItem(Item item)
@@ -52,6 +56,9 @@ public class PlayerController : MonoBehaviour
     public void PlayerDied()
     {
         Debug.Log(gameObject.name + " died.");
+
+        m_PlayerSounds.PlayPlayerDeathSound();
+
         GameManager.Instance.PlayerLost(this);
     }
 
