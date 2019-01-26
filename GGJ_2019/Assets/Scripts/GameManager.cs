@@ -12,6 +12,8 @@ public class GameManager : Singleton<GameManager>
         EndGame
     }
 
+    [SerializeField] private PlayerController[] players;
+
     [SerializeField] private UI m_UI;
     [SerializeField] private Transform m_light;
 
@@ -66,10 +68,9 @@ public class GameManager : Singleton<GameManager>
 
     public void EnablePlayer(bool enabled)
     {
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        foreach (GameObject player in players)
+        foreach (PlayerController player in players)
         {
-            player.GetComponent<PlayerController>().IsActive = enabled;
+            player.IsActive = enabled;
         }
     }
 
@@ -77,6 +78,15 @@ public class GameManager : Singleton<GameManager>
     {
         if (gameState == GameState.Playing)
         {
+            if (controller.GetPlayerNumber() == Player.Player1)
+            {
+                m_UI.WinnerWinnerChickenDinner("PLAYER 2", "RED");
+            }
+            else
+            {
+                m_UI.WinnerWinnerChickenDinner("PLAYER 1", "BLUE");
+            }
+
             EndGame();
         }
     }

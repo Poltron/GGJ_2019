@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-enum Player
+public enum Player
 {
     Player1,
     Player2
@@ -76,5 +76,10 @@ public class PlayerController : MonoBehaviour
 
         _rigidBody.velocity = Vector3.zero;
         _rigidBody.AddForce(movement);
+    }
+
+    public Player GetPlayerNumber()
+    {
+        return m_PlayerNumber;
     }
 }
