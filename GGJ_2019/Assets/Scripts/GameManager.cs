@@ -105,6 +105,13 @@ public class GameManager : Singleton<GameManager>
             staticTime = minStaticTime;
 
         int rdm = UnityEngine.Random.Range(0, windSpawners.Length - 1);
+        if (rdm == windSpawnerIndex)
+        {
+            rdm--;
+            if (rdm < 0)
+                rdm = windSpawners.Length - 1;
+        }
+
         nextMeteo = StartCoroutine(GoForNextMeteo(transitionTime, rdm, TriggerMeteo));
     }
 
