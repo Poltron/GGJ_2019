@@ -12,16 +12,11 @@ public class UI : MonoBehaviour
     [SerializeField] private GameObject m_EndCanvas;
 
     [Space]
-    [SerializeField] private Button m_PlayButton;
-
-    [Space]
     [SerializeField] private Text m_PlayerWinner;
 
     void Start ()
     {
         ResetScreen();
-
-        m_PlayButton.onClick.AddListener(ShowHidePauseCanvas);
 	}
 
     public void ResetScreen()
