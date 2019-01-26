@@ -903,6 +903,11 @@ Prefab:
       propertyPath: m_PauseButton
       value: 
       objectReference: {fileID: 769362114}
+    - target: {fileID: 114522484056655686, guid: 0443f573f55e257408b40d8a6b847049,
+        type: 2}
+      propertyPath: m_PlayButton
+      value: 
+      objectReference: {fileID: 769362114}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0443f573f55e257408b40d8a6b847049, type: 2}
   m_IsPrefabAsset: 0
@@ -1498,13 +1503,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1054310898371486, guid: 1426e3b7c448d7345830e5f42e1b5d39, type: 2}
       propertyPath: m_Name
-      value: Player_ARROW
+      value: Player2
       objectReference: {fileID: 0}
-    - target: {fileID: 23768252794005688, guid: 1426e3b7c448d7345830e5f42e1b5d39,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 68ac4901caa2502468c7e60015ac36b0, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1426e3b7c448d7345830e5f42e1b5d39, type: 2}
   m_IsPrefabAsset: 0
@@ -1614,20 +1614,20 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114132156954284374, guid: 1426e3b7c448d7345830e5f42e1b5d39,
-        type: 2}
-      propertyPath: controls
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1054310898371486, guid: 1426e3b7c448d7345830e5f42e1b5d39, type: 2}
       propertyPath: m_Name
-      value: Player_ZQSD
+      value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114132156954284374, guid: 1426e3b7c448d7345830e5f42e1b5d39,
+        type: 2}
+      propertyPath: m_PlayerNumber
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 23768252794005688, guid: 1426e3b7c448d7345830e5f42e1b5d39,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6beaed5f3d23c4e4585adfbf33f61fa8, type: 2}
+      objectReference: {fileID: 2100000, guid: 59fcc1550ca50474683d1af37e86061d, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1426e3b7c448d7345830e5f42e1b5d39, type: 2}
   m_IsPrefabAsset: 0
