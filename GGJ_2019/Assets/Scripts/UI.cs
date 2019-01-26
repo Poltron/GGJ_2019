@@ -14,16 +14,14 @@ public class UI : MonoBehaviour
     [Space]
     [SerializeField] private Button m_PlayButton;
 
+    [Space]
+    [SerializeField] private Text m_PlayerWinner;
+
     void Start ()
     {
         ResetScreen();
 
         m_PlayButton.onClick.AddListener(ShowHidePauseCanvas);
-	}
-	
-	void Update ()
-    {
-		
 	}
 
     public void ResetScreen()
@@ -52,5 +50,10 @@ public class UI : MonoBehaviour
     public void ShowHidePauseCanvas()
     {
         m_PauseCanvas.SetActive(!m_PauseCanvas.activeSelf);
+    }
+
+    public void WinnerWinnerChickenDinner(string player, string color)
+    {
+        m_PlayerWinner.text = player + " (" + ") WON !";
     }
 }
