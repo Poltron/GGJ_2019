@@ -17,6 +17,8 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private UI m_UI;
     [SerializeField] private Transform m_light;
 
+    private StormSounds m_StormSounds;
+
     public GameState gameState;
 
     public bool SharedController = false;
@@ -35,6 +37,8 @@ public class GameManager : Singleton<GameManager>
     {
         
         gameState = GameState.Menu;
+
+        m_StormSounds = m_light.gameObject.GetComponent<StormSounds>();
     }
 
     void Update ()
@@ -148,6 +152,8 @@ public class GameManager : Singleton<GameManager>
 
         Quaternion begin = m_light.rotation;
         Quaternion end = windSpawners[windSpawnerIndex].transform.rotation;
+
+        m_StormSounds.PlayLightSwitchSound();
 
         for (float f = 0.0f; f < t; f += Time.deltaTime)
         {
