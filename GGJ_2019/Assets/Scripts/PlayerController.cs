@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
         _transform = transform;
 
         items = new List<Item>();
-
+        IsActive = false;
         m_PlayerSounds = gameObject.GetComponent<PlayerSounds>();
     }
 
@@ -64,6 +64,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (!IsActive)
+            return;
+
         m_Velocity = new Vector2();
 
         if (m_PlayerNumber == Player.Player1)

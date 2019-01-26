@@ -484,7 +484,7 @@ Prefab:
     - target: {fileID: 23428305118059958, guid: d4131dce7015d934eac9469601d03890,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1766490152217704, guid: d4131dce7015d934eac9469601d03890, type: 2}
       propertyPath: m_Layer
@@ -633,7 +633,7 @@ Prefab:
     - target: {fileID: 23428305118059958, guid: d4131dce7015d934eac9469601d03890,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1766490152217704, guid: d4131dce7015d934eac9469601d03890, type: 2}
       propertyPath: m_Layer
@@ -1724,7 +1724,7 @@ Prefab:
     - target: {fileID: 23428305118059958, guid: d4131dce7015d934eac9469601d03890,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1766490152217704, guid: d4131dce7015d934eac9469601d03890, type: 2}
       propertyPath: m_Layer
@@ -1876,7 +1876,7 @@ Prefab:
     - target: {fileID: 23428305118059958, guid: d4131dce7015d934eac9469601d03890,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1980342765640218, guid: d4131dce7015d934eac9469601d03890, type: 2}
       propertyPath: m_Layer
@@ -2330,7 +2330,7 @@ Prefab:
     - target: {fileID: 23428305118059958, guid: d4131dce7015d934eac9469601d03890,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1766490152217704, guid: d4131dce7015d934eac9469601d03890, type: 2}
       propertyPath: m_Layer
@@ -2518,7 +2518,7 @@ Prefab:
     - target: {fileID: 23428305118059958, guid: d4131dce7015d934eac9469601d03890,
         type: 2}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1766490152217704, guid: d4131dce7015d934eac9469601d03890, type: 2}
       propertyPath: m_Layer
