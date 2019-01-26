@@ -14,19 +14,41 @@ public class PlayerController : MonoBehaviour
     private Rigidbody _rigidBody;
 
     [SerializeField] private Controls controls;
+    [SerializeField] private List<Item> items;
+
+    public bool IsActive;
 
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();
     }
 
-    void Start ()
+    public void AddItem(Item item)
     {
-		
-	}
+        items.Add(item);
+    }
+
+    public void RemoveItem(Item item)
+    {
+        Debug.Log(gameObject.name + " died.");
+        items.Remove(item);
+
+        if (items.Count == 0)
+        {
+            GameManager.Instance.PlayerLost(this);
+        }
+    }
+
+    public void PlayerDied()
+    {
+        Debug.Log(gameObject.name + " died.");
+    }
 
     private void FixedUpdate()
     {
+        if (!IsActive)
+            return;
+
         Vector2 velocity = new Vector2();
         if (controls == Controls.ZQSD)
         {
