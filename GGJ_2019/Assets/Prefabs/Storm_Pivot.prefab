@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4582982623296840}
   - component: {fileID: 108475857475221808}
+  - component: {fileID: 95000499652432838}
   m_Layer: 0
   m_Name: Storm_Light
   m_TagString: Untagged
@@ -69,6 +70,24 @@ Transform:
   m_Father: {fileID: 4521446525871564}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 20, y: 0, z: 0}
+--- !u!95 &95000499652432838
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1285792381040276}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a6617aab1fd143245bb83ffcb82829f1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!108 &108475857475221808
 Light:
   m_ObjectHideFlags: 1
