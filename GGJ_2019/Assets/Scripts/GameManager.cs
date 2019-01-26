@@ -12,6 +12,8 @@ public class GameManager : Singleton<GameManager>
         EndGame
     }
 
+    [SerializeField] private UI m_UI;
+
     public GameState gameState;
 
     private Coroutine nextMeteo;
@@ -40,6 +42,8 @@ public class GameManager : Singleton<GameManager>
 
     public void StartGame()
     {
+        m_UI.DisplayGameCanvas();
+
         gameState = GameState.Playing;
         EnablePlayer(true);
         StartCoroutine(timer(timeToWait, TriggerSpawner));
@@ -62,6 +66,8 @@ public class GameManager : Singleton<GameManager>
 
     public void EndGame()
     {
+        m_UI.DisplayEndCanvas();
+
         gameState = GameState.EndGame;
 
         StopCoroutine(nextMeteo);
