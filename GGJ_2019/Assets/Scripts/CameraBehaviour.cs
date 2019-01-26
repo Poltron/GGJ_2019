@@ -9,6 +9,7 @@ public class CameraBehaviour : MonoBehaviour
 
 	void Start ()
     {
+
 	}
 	
 	void LateUpdate ()

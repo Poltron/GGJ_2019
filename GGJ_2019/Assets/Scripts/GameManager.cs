@@ -46,7 +46,8 @@ public class GameManager : Singleton<GameManager>
 
         gameState = GameState.Playing;
         EnablePlayer(true);
-        StartCoroutine(timer(timeToWait, TriggerSpawner));
+
+        StartCoroutine(timer(timeToWait, TriggerMeteo));
     }
 
     public void EnablePlayer(bool enabled)
@@ -60,12 +61,16 @@ public class GameManager : Singleton<GameManager>
 
     public void PlayerLost(PlayerController controller)
     {
-        Debug.Log(controller.name + " lost");
-        EndGame();
+        if (gameState == GameState.Playing)
+        {
+            EndGame();
+        }
     }
 
     public void EndGame()
     {
+        Debug.Log("end game.");
+
         m_UI.DisplayEndCanvas();
 
         gameState = GameState.EndGame;
@@ -74,32 +79,29 @@ public class GameManager : Singleton<GameManager>
 
         EnablePlayer(false);
 
-        timer(2.0f, ReloadGame);
+        StartCoroutine(timer(2.0f, ReloadGame));
     }
 
-    public void TriggerSpawner()
+    public void TriggerMeteo()
     {
         int rdm = UnityEngine.Random.Range(0, windSpawners.Length - 1);
-
         windSpawners[rdm].Spawn();
+
+        timeToWait -= decrementTimeToWait;
+        if (timeToWait < minTimetoWait)
+            timeToWait = minTimetoWait;
+
+        nextMeteo = StartCoroutine(timer(timeToWait, TriggerMeteo));
     }
 
     private void ReloadGame()
     {
-        Debug.Log("ReloadScene");
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
     private IEnumerator timer(float f, Action callback)
     {
         yield return new WaitForSeconds(f);
-
-        timeToWait -= decrementTimeToWait;
-        if (timeToWait < minTimetoWait)
-            timeToWait = minTimetoWait;
-
         callback();
-
-        nextMeteo = StartCoroutine(timer(timeToWait, TriggerSpawner));
     }
 }
