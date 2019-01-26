@@ -1,17 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
-    [SerializeField] private GameObject StartCanvas;
-    [SerializeField] private GameObject GameCanvas;
-    [SerializeField] private GameObject PauseCanvas;
-    [SerializeField] private GameObject EndCanvas;
+    [SerializeField] private GameObject m_StartCanvas;
+    [SerializeField] private GameObject m_GameCanvas;
+    [SerializeField] private GameObject m_PauseCanvas;
+    [SerializeField] private GameObject m_EndCanvas;
+
+    [Space]
+    [SerializeField] private Button m_PlayButton;
 
     void Start ()
     {
         ResetScreen();
+
+        m_PlayButton.onClick.AddListener(ShowHidePauseCanvas);
 	}
 	
 	void Update ()
@@ -21,24 +28,29 @@ public class UI : MonoBehaviour
 
     public void ResetScreen()
     {
-        GameCanvas.SetActive(false);
-        PauseCanvas.SetActive(false);
-        EndCanvas.SetActive(false);
+        m_GameCanvas.SetActive(false);
+        m_PauseCanvas.SetActive(false);
+        m_EndCanvas.SetActive(false);
 
-        StartCanvas.SetActive(true);
+        m_StartCanvas.SetActive(true);
     }
 
     public void DisplayGameCanvas()
     {
-        StartCanvas.SetActive(false);
+        m_StartCanvas.SetActive(false);
 
-        GameCanvas.SetActive(true);
+        m_GameCanvas.SetActive(true);
     }
 
     public void DisplayEndCanvas()
     {
-        GameCanvas.SetActive(false);
+        m_GameCanvas.SetActive(false);
 
-        EndCanvas.SetActive(true);
+        m_EndCanvas.SetActive(true);
+    }
+
+    public void ShowHidePauseCanvas()
+    {
+        m_PauseCanvas.SetActive(!m_PauseCanvas.activeSelf);
     }
 }
