@@ -1430,6 +1430,7 @@ MonoBehaviour:
   m_UI: {fileID: 769362111}
   m_light: {fileID: 400981464}
   gameState: 0
+  SharedController: 0
   transitionTime: 1
   staticTime: 5
   decrementStaticTime: 0.1

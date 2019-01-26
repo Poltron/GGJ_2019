@@ -60,8 +60,16 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            m_Velocity.x = Input.GetAxisRaw("Horizontal2");
-            m_Velocity.y = Input.GetAxisRaw("Vertical2");
+            if (!GameManager.Instance.SharedController)
+            {
+                m_Velocity.x = Input.GetAxisRaw("Horizontal2");
+                m_Velocity.y = Input.GetAxisRaw("Vertical2");
+            }
+            else
+            {
+                m_Velocity.x = Input.GetAxisRaw("Horizontal2Shared");
+                m_Velocity.y = Input.GetAxisRaw("Vertical2Shared");
+            }
         }
 
         m_Velocity.Normalize();

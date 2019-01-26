@@ -19,6 +19,8 @@ public class GameManager : Singleton<GameManager>
 
     public GameState gameState;
 
+    public bool SharedController = false;
+
     private Coroutine nextMeteo;
 
     public float transitionTime;
