@@ -21,8 +21,7 @@ public class ColliderGitan : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("PlayerLost");
-            GameManager.Instance.PlayerLost(other.gameObject.GetComponent<PlayerController>());
+            other.gameObject.GetComponent<PlayerController>().PlayerDied();
         }
         if (other.tag == "Wall")
         {
@@ -30,7 +29,7 @@ public class ColliderGitan : MonoBehaviour
         }
         if (other.tag == "Item")
         {
-            Destroy(other.gameObject);
+            other.GetComponent<Item>().Destroyed();
         }
     }
 }

@@ -14,13 +14,14 @@ public class PlayerController : MonoBehaviour
     private Rigidbody _rigidBody;
 
     [SerializeField] private Controls controls;
-    [SerializeField] private List<Item> items;
+    private List<Item> items;
 
     public bool IsActive;
 
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();
+        items = new List<Item>();
     }
 
     public void AddItem(Item item)
@@ -42,6 +43,7 @@ public class PlayerController : MonoBehaviour
     public void PlayerDied()
     {
         Debug.Log(gameObject.name + " died.");
+        GameManager.Instance.PlayerLost(this);
     }
 
     private void FixedUpdate()
