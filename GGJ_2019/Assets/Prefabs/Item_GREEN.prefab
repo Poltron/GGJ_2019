@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 82249891234662820}
   m_Layer: 0
   m_Name: Item_GREEN
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -389,6 +389,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dabc09ca11105be48a64d02e1c273e1a, type: 3}
   - {fileID: 8300000, guid: befed87584fb3fb459b664183a5c5e63, type: 3}
   m_SFXPrefab: {fileID: 0}
+  m_LightFX: {fileID: 108337027944468412}
+  m_LifeFX: {fileID: 198952317896473698}
+  m_EndFX: {fileID: 198616951569085066}
 --- !u!198 &198038163369635720
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -38,14 +38,14 @@ public class PlayerController : MonoBehaviour
 
     public void RemoveItem(Item item)
     {
-        Debug.Log(gameObject.name + "objectdie");
+        Debug.Log(gameObject.name + "object died");
         items.Remove(item);
-        Destroy(item.gameObject);
+        //Destroy(item.gameObject);
 
         if (items.Count == 0)
         {
             GameManager.Instance.PlayerLost(this);
-            Debug.Log(gameObject.name + " DiedByNoItems.");
+            Debug.Log(gameObject.name + " Died By No Items.");
         }
     }
 
