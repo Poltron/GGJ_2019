@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4521446525871564}
+  - component: {fileID: 114724893880568250}
   m_Layer: 0
   m_Name: Storm_Pivot
   m_TagString: Untagged
@@ -125,3 +126,22 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114724893880568250
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1699416887467984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91445638a724e7c4da253a5860d6e00d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SFXPrefab: {fileID: 1248325135011242, guid: 069b759ad23fca947a91c9bc999f896d,
+    type: 2}
+  m_LightSwitchAudioClips:
+  - {fileID: 8300000, guid: 8961d8a769f4b1149bad4304b9f1bdc7, type: 3}
+  - {fileID: 8300000, guid: 432b9649b94072949b2c1b2bae7d29e7, type: 3}
+  - {fileID: 8300000, guid: ca707e9ccda0cdf4ea621c72f541262b, type: 3}
+  - {fileID: 8300000, guid: 78b73b5e17f55e442873d17ac01cfb2b, type: 3}
+  - {fileID: 8300000, guid: 7ee6d037a74ad934389aebe06173a3ae, type: 3}
