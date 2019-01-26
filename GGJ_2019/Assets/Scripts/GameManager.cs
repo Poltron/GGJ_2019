@@ -78,6 +78,15 @@ public class GameManager : Singleton<GameManager>
     {
         if (gameState == GameState.Playing)
         {
+            if (controller.GetPlayerNumber() == Player.Player1)
+            {
+                m_UI.WinnerWinnerChickenDinner("PLAYER 2", "RED");
+            }
+            else
+            {
+                m_UI.WinnerWinnerChickenDinner("PLAYER 1", "BLUE");
+            }
+
             EndGame();
         }
     }

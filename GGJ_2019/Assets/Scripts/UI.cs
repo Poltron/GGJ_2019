@@ -54,6 +54,6 @@ public class UI : MonoBehaviour
 
     public void WinnerWinnerChickenDinner(string player, string color)
     {
-        m_PlayerWinner.text = player + " (" + ") WON !";
+        m_PlayerWinner.text = player + " (" + color + ") WON !";
     }
 }

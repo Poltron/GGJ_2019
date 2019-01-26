@@ -1426,6 +1426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b8cf32641caa14baf5d950a22ae823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  players: []
   m_UI: {fileID: 769362111}
   m_light: {fileID: 400981464}
   gameState: 0
@@ -1891,6 +1892,11 @@ Prefab:
         type: 2}
       propertyPath: Speed
       value: 20000
+      objectReference: {fileID: 0}
+    - target: {fileID: 114132156954284374, guid: 1426e3b7c448d7345830e5f42e1b5d39,
+        type: 2}
+      propertyPath: m_PlayerNumber
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1426e3b7c448d7345830e5f42e1b5d39, type: 2}
