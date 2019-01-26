@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float Speed;
     private Rigidbody _rigidBody;
+    private Transform _transform;
+
+    [SerializeField] private Transform _mesh;
 
     [SerializeField] private Player m_PlayerNumber;
     private List<Item> items;
@@ -23,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _rigidBody = GetComponent<Rigidbody>();
+        _transform = transform;
+
         items = new List<Item>();
     }
 
@@ -73,6 +78,8 @@ public class PlayerController : MonoBehaviour
         }
 
         m_Velocity.Normalize();
+
+        transform.LookAt(transform.position + new Vector3(m_Velocity.x, 0, m_Velocity.y));
     }
 
     private void FixedUpdate()
