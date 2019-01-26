@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
         EndGame
     }
 
+    [SerializeField] private UI m_UI;
+
     public GameState gameState;
 
     private Coroutine nextMeteo;
@@ -40,6 +42,8 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        m_UI.DisplayGameCanvas();
+
         gameState = GameState.Playing;
 
         StartCoroutine(timer(timeToWait, TriggerSpawner));
@@ -47,6 +51,8 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
+        m_UI.DisplayEndCanvas();
+
         gameState = GameState.EndGame;
     }
 

@@ -28,8 +28,17 @@ public class UI : MonoBehaviour
         StartCanvas.SetActive(true);
     }
 
-    public void HideStartCanvas()
+    public void DisplayGameCanvas()
     {
         StartCanvas.SetActive(false);
+
+        GameCanvas.SetActive(true);
+    }
+
+    public void DisplayEndCanvas()
+    {
+        GameCanvas.SetActive(false);
+
+        EndCanvas.SetActive(true);
     }
 }
