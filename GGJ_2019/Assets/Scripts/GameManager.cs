@@ -19,9 +19,10 @@ public class GameManager : Singleton<GameManager>
 
     private Coroutine nextMeteo;
 
-    public float timeToWait;
-    public float decrementTimeToWait;
-    public float minTimetoWait;
+    public float transitionTime;
+    public float staticTime;
+    public float decrementStaticTime;
+    public float minStaticTime;
 
     public WindSpawner[] windSpawners;
 
@@ -55,7 +56,7 @@ public class GameManager : Singleton<GameManager>
         EnablePlayer(true);
 
         int rdm = UnityEngine.Random.Range(0, windSpawners.Length - 1);
-        StartCoroutine(GoForNextMeteo(timeToWait, rdm, TriggerMeteo));
+        StartCoroutine(GoForNextMeteo(transitionTime, rdm, TriggerMeteo));
     }
 
     public void PauseGame()
@@ -99,12 +100,12 @@ public class GameManager : Singleton<GameManager>
     {
         windSpawners[windSpawnerIndex].Spawn();
 
-        timeToWait -= decrementTimeToWait;
-        if (timeToWait < minTimetoWait)
-            timeToWait = minTimetoWait;
+        staticTime -= decrementStaticTime;
+        if (staticTime < minStaticTime)
+            staticTime = minStaticTime;
 
         int rdm = UnityEngine.Random.Range(0, windSpawners.Length - 1);
-        nextMeteo = StartCoroutine(GoForNextMeteo(timeToWait, rdm, TriggerMeteo));
+        nextMeteo = StartCoroutine(GoForNextMeteo(transitionTime, rdm, TriggerMeteo));
     }
 
     private void ReloadGame()
@@ -124,7 +125,7 @@ public class GameManager : Singleton<GameManager>
             yield return new WaitForEndOfFrame();
         }
 
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(staticTime);
 
         callback(windSpawnerIndex);
     }
