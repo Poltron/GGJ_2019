@@ -2,10 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+enum Controls
+{
+    Arrow,
+    ZQSD
+}
+
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float Speed;
     private Rigidbody _rigidBody;
+
+    [SerializeField] private Controls controls;
 
     private void Awake()
     {
@@ -20,31 +28,61 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Vector2 velocity = new Vector2();
+        if (controls == Controls.ZQSD)
+        {
+            if (Input.GetKey(KeyCode.Z))
+            {
+                velocity.y += 1;
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                velocity.y -= 1;
+            }
+            else
+            {
+                velocity.y = 0;
+            }
 
-        if (Input.GetKey(KeyCode.Z))
-        {
-            velocity.y += 1;
+            if (Input.GetKey(KeyCode.D))
+            {
+                velocity.x += 1;
+            }
+            else if (Input.GetKey(KeyCode.Q))
+            {
+                velocity.x -= 1;
+            }
+            else
+            {
+                velocity.x = 0;
+            }
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (controls == Controls.Arrow)
         {
-            velocity.y -= 1;
-        }
-        else
-        {
-            velocity.y = 0;
-        }
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                velocity.y += 1;
+            }
+            else if (Input.GetKey(KeyCode.DownArrow))
+            {
+                velocity.y -= 1;
+            }
+            else
+            {
+                velocity.y = 0;
+            }
 
-        if (Input.GetKey(KeyCode.D))
-        {
-            velocity.x += 1;
-        }
-        else if (Input.GetKey(KeyCode.Q))
-        {
-            velocity.x -= 1;
-        }
-        else
-        {
-            velocity.x = 0;
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                velocity.x += 1;
+            }
+            else if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                velocity.x -= 1;
+            }
+            else
+            {
+                velocity.x = 0;
+            }
         }
 
         velocity.Normalize();
