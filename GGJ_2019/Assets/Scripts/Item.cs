@@ -10,6 +10,12 @@ public class Item : MonoBehaviour
 
     [SerializeField] private GameObject m_SFXPrefab;
 
+    [SerializeField] private Light m_LightFX;
+    [SerializeField] private ParticleSystem m_LifeFX;
+    [SerializeField] private ParticleSystem m_EndFX;
+
+    private bool m_IsAlive = true;
+
 	void Start ()
     {
         owner.AddItem(this);
@@ -17,8 +23,20 @@ public class Item : MonoBehaviour
 	
     public void Destroyed()
     {
-        GameObject sfx = Instantiate(m_SFXPrefab);
-        sfx.GetComponent<SFX>().PlaySound(m_AudioClips[Random.Range(0, m_AudioClips.Count)]);
+        if (!m_IsAlive)
+            return;
+
+        m_IsAlive = false;
+
+        if (m_SFXPrefab)
+        {
+            GameObject sfx = Instantiate(m_SFXPrefab);
+            sfx.GetComponent<SFX>().PlaySound(m_AudioClips[Random.Range(0, m_AudioClips.Count)]);
+        }
+
+        m_LightFX.enabled = false;
+        m_LifeFX.Stop();
+        m_EndFX.Play();
 
         owner.RemoveItem(this);
     }
