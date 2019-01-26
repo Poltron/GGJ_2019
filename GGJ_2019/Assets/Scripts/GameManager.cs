@@ -13,6 +13,7 @@ public class GameManager : Singleton<GameManager>
     }
 
     [SerializeField] private UI m_UI;
+    [SerializeField] private Transform m_light;
 
     public GameState gameState;
 
@@ -26,6 +27,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
+        
         gameState = GameState.Menu;
     }
 
@@ -52,7 +54,8 @@ public class GameManager : Singleton<GameManager>
         gameState = GameState.Playing;
         EnablePlayer(true);
 
-        StartCoroutine(timer(timeToWait, TriggerMeteo));
+        int rdm = UnityEngine.Random.Range(0, windSpawners.Length - 1);
+        StartCoroutine(GoForNextMeteo(timeToWait, rdm, TriggerMeteo));
     }
 
     public void PauseGame()
@@ -89,19 +92,19 @@ public class GameManager : Singleton<GameManager>
 
         EnablePlayer(false);
 
-        StartCoroutine(timer(2.0f, ReloadGame));
+        StartCoroutine(Timer(2.0f, ReloadGame));
     }
 
-    public void TriggerMeteo()
+    public void TriggerMeteo(int windSpawnerIndex)
     {
-        int rdm = UnityEngine.Random.Range(0, windSpawners.Length - 1);
-        windSpawners[rdm].Spawn();
+        windSpawners[windSpawnerIndex].Spawn();
 
         timeToWait -= decrementTimeToWait;
         if (timeToWait < minTimetoWait)
             timeToWait = minTimetoWait;
 
-        nextMeteo = StartCoroutine(timer(timeToWait, TriggerMeteo));
+        int rdm = UnityEngine.Random.Range(0, windSpawners.Length - 1);
+        nextMeteo = StartCoroutine(GoForNextMeteo(timeToWait, rdm, TriggerMeteo));
     }
 
     private void ReloadGame()
@@ -109,9 +112,26 @@ public class GameManager : Singleton<GameManager>
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
-    private IEnumerator timer(float f, Action callback)
+    private IEnumerator GoForNextMeteo(float t, int windSpawnerIndex, Action<int> callback)
     {
-        yield return new WaitForSeconds(f);
+        Quaternion begin = m_light.rotation;
+        Quaternion end = windSpawners[windSpawnerIndex].transform.rotation;
+
+        for (float f = 0.0f; f < t; f += Time.deltaTime)
+        {
+            Quaternion tmp = Quaternion.Lerp(begin, end, f / t);
+            m_light.rotation = tmp;
+            yield return new WaitForEndOfFrame();
+        }
+
+        yield return new WaitForSeconds(1.0f);
+
+        callback(windSpawnerIndex);
+    }
+
+    private IEnumerator Timer(float t, Action callback)
+    {
+        yield return new WaitForSeconds(t);
         callback();
     }
 }
