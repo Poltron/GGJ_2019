@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log(gameObject.name + " died.");
         items.Remove(item);
+        Destroy(item.gameObject);
 
         if (items.Count == 0)
         {

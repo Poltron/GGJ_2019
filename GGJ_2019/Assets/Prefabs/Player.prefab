@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 135987792502638726}
   - component: {fileID: 114132156954284374}
   - component: {fileID: 54443330672287408}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 25000
-  m_PlayerNumber: 1
+  m_PlayerNumber: 0
   IsActive: 0
 --- !u!135 &135987792502638726
 SphereCollider:
