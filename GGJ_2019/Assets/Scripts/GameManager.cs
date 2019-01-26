@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : Singleton<GameManager>
 {
     public enum GameState
     {
@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
         Playing,
         EndGame
     }
+
+    [SerializeField] private UI m_UI;
 
     public GameState gameState;
 
@@ -33,21 +35,46 @@ public class GameManager : MonoBehaviour
         {
             if (gameState == GameState.Menu)
                 StartGame();
-            else if (gameState == GameState.Playing)
-                EndGame();
+            else if (gameState == GameState.EndGame)
+                StartGame();
         }
 	}
 
     public void StartGame()
     {
-        gameState = GameState.Playing;
+        m_UI.DisplayGameCanvas();
 
+        gameState = GameState.Playing;
+        EnablePlayer(true);
         StartCoroutine(timer(timeToWait, TriggerSpawner));
+    }
+
+    public void EnablePlayer(bool enabled)
+    {
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject player in players)
+        {
+            player.GetComponent<PlayerController>().IsActive = enabled;
+        }
+    }
+
+    public void PlayerLost(PlayerController controller)
+    {
+        Debug.Log(controller.name + " lost");
+        EndGame();
     }
 
     public void EndGame()
     {
+        m_UI.DisplayEndCanvas();
+
         gameState = GameState.EndGame;
+
+        StopCoroutine(nextMeteo);
+
+        EnablePlayer(false);
+
+        timer(2.0f, ReloadGame);
     }
 
     public void TriggerSpawner()
@@ -55,6 +82,12 @@ public class GameManager : MonoBehaviour
         int rdm = UnityEngine.Random.Range(0, windSpawners.Length - 1);
 
         windSpawners[rdm].Spawn();
+    }
+
+    private void ReloadGame()
+    {
+        Debug.Log("ReloadScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
     private IEnumerator timer(float f, Action callback)
