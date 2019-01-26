@@ -38,6 +38,11 @@ public class GameManager : Singleton<GameManager>
             else if (gameState == GameState.EndGame)
                 StartGame();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && gameState == GameState.Playing)
+        {
+            PauseGame();
+        }
 	}
 
     public void StartGame()
@@ -48,6 +53,11 @@ public class GameManager : Singleton<GameManager>
         EnablePlayer(true);
 
         StartCoroutine(timer(timeToWait, TriggerMeteo));
+    }
+
+    public void PauseGame()
+    {
+        m_UI.ShowHidePauseCanvas();
     }
 
     public void EnablePlayer(bool enabled)
