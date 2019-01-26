@@ -201,7 +201,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4149793838416810, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 4
+      value: 5.18
       objectReference: {fileID: 0}
     - target: {fileID: 4149793838416810, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
       propertyPath: m_LocalRotation.x
@@ -226,6 +226,10 @@ Prefab:
     - target: {fileID: 1040109439009350, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
       propertyPath: m_Name
       value: Rail-haut
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149793838416810, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 2.0662498
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
@@ -1143,6 +1147,10 @@ Prefab:
       propertyPath: m_Name
       value: Rail-bas
       objectReference: {fileID: 0}
+    - target: {fileID: 4149793838416810, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.925
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
   m_IsPrefabAsset: 0
@@ -1320,7 +1328,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4149793838416810, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.41
+      value: -8.47
       objectReference: {fileID: 0}
     - target: {fileID: 4149793838416810, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1353,6 +1361,10 @@ Prefab:
     - target: {fileID: 1040109439009350, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
       propertyPath: m_Name
       value: Rail-gauche
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149793838416810, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.5875
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
@@ -2089,7 +2101,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4149793838416810, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.93
+      value: 9.29
       objectReference: {fileID: 0}
     - target: {fileID: 4149793838416810, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2122,6 +2134,10 @@ Prefab:
     - target: {fileID: 1040109439009350, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
       propertyPath: m_Name
       value: Rail-droite
+      objectReference: {fileID: 0}
+    - target: {fileID: 4149793838416810, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.7375
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
