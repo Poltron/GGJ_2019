@@ -8,7 +8,7 @@ public class Item : MonoBehaviour
 
     [SerializeField] private List<AudioClip> m_AudioClips;
 
-    [SerializeField] private GameObject m_SFXPrefab;
+    [SerializeField] private GameObject m_ItemSFXPrefab;
 
     [SerializeField] private Light m_LightFX;
     [SerializeField] private ParticleSystem m_LifeFX;
@@ -28,9 +28,9 @@ public class Item : MonoBehaviour
 
         m_IsAlive = false;
 
-        if (m_SFXPrefab)
+        if (m_ItemSFXPrefab)
         {
-            GameObject sfx = Instantiate(m_SFXPrefab);
+            GameObject sfx = Instantiate(m_ItemSFXPrefab);
             sfx.GetComponent<SFX>().PlaySound(m_AudioClips[Random.Range(0, m_AudioClips.Count)]);
         }
 

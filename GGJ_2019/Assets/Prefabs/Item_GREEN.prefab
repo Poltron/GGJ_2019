@@ -388,7 +388,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ff97ef35d2df41e48852bbcdca5d971e, type: 3}
   - {fileID: 8300000, guid: dabc09ca11105be48a64d02e1c273e1a, type: 3}
   - {fileID: 8300000, guid: befed87584fb3fb459b664183a5c5e63, type: 3}
-  m_SFXPrefab: {fileID: 1248325135011242, guid: 50456d4ae2cd3f741a9d7bac4e7933a7,
+  m_ItemSFXPrefab: {fileID: 1248325135011242, guid: 50456d4ae2cd3f741a9d7bac4e7933a7,
     type: 2}
   m_LightFX: {fileID: 108337027944468412}
   m_LifeFX: {fileID: 198952317896473698}
