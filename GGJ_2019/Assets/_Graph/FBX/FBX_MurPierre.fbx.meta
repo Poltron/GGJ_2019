@@ -10,7 +10,17 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: Mur
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mur_Cotes_MAT
+    second: {fileID: 2100000, guid: e5620392a8eabd2408a2b434ede27932, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rocher_MAT
+    second: {fileID: 2100000, guid: 424291c090266f84faaa68035c0744ad, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
