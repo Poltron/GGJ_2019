@@ -23,6 +23,7 @@ public class GameManager : Singleton<GameManager>
 
     private Coroutine nextMeteo;
 
+    public float timeBeforeTransition;
     public float transitionTime;
     public float staticTime;
     public float decrementStaticTime;
@@ -134,7 +135,7 @@ public class GameManager : Singleton<GameManager>
 
     private IEnumerator GoForNextMeteo(float t, int windSpawnerIndex, Action<int> callback)
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(timeBeforeTransition);
 
         Quaternion begin = m_light.rotation;
         Quaternion end = windSpawners[windSpawnerIndex].transform.rotation;
@@ -146,7 +147,11 @@ public class GameManager : Singleton<GameManager>
             yield return new WaitForEndOfFrame();
         }
 
-        yield return new WaitForSeconds(staticTime);
+        yield return new WaitForSeconds(staticTime - 2.5f);
+
+        m_light.GetComponentInChildren<Animator>().SetTrigger("Alert");
+
+        yield return new WaitForSeconds(2.5f);
 
         callback(windSpawnerIndex);
     }
