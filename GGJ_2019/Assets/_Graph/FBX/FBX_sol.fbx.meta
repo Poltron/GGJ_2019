@@ -11,7 +11,22 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: pCube51
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dalle_dessous_MAT
+    second: {fileID: 2100000, guid: 12db2f90234f17748aca3e3076357748, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dalles
+    second: {fileID: 2100000, guid: 72219c4ea6ae3b2429b750ce322e1534, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Interstices
+    second: {fileID: 2100000, guid: 0686f917a7a055d418be254cf702b7d3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
