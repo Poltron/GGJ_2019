@@ -720,7 +720,7 @@ Prefab:
     - target: {fileID: 224942068932556246, guid: 0443f573f55e257408b40d8a6b847049,
         type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 224942068932556246, guid: 0443f573f55e257408b40d8a6b847049,
         type: 2}
@@ -760,7 +760,7 @@ Prefab:
     - target: {fileID: 224942068932556246, guid: 0443f573f55e257408b40d8a6b847049,
         type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 224942068932556246, guid: 0443f573f55e257408b40d8a6b847049,
         type: 2}
@@ -1306,7 +1306,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1199877223
 MonoBehaviour:
@@ -1322,9 +1322,10 @@ MonoBehaviour:
   m_UI: {fileID: 769362111}
   m_light: {fileID: 400981464}
   gameState: 0
-  timeToWait: 3
-  decrementTimeToWait: 0.1
-  minTimetoWait: 1
+  transitionTime: 1
+  staticTime: 5
+  decrementStaticTime: 0.1
+  minStaticTime: 2.5
   windSpawners:
   - {fileID: 490717793}
   - {fileID: 538083073}
