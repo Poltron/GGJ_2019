@@ -115,6 +115,8 @@ public class GameManager : Singleton<GameManager>
 
     private IEnumerator GoForNextMeteo(float t, int windSpawnerIndex, Action<int> callback)
     {
+        yield return new WaitForSeconds(1.5f);
+
         Quaternion begin = m_light.rotation;
         Quaternion end = windSpawners[windSpawnerIndex].transform.rotation;
 
