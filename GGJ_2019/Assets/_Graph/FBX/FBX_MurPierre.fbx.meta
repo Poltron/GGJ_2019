@@ -1,14 +1,15 @@
 fileFormatVersion: 2
-guid: 3b0d0c9668c061b4daaaaa5745a43354
+guid: 4d950a269ed99ac42a34dc1106d974b7
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Rail_MAT
+    2100000: Mur_Cotes_MAT
+    2100002: Rocher_MAT
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pCube29
+    4300000: Mur
   externalObjects: {}
   materials:
     importMaterials: 1
