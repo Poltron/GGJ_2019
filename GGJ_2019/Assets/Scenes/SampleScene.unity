@@ -1426,11 +1426,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b8cf32641caa14baf5d950a22ae823, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players: []
+  players:
+  - {fileID: 1574679130}
+  - {fileID: 1422156324}
   m_UI: {fileID: 769362111}
   m_light: {fileID: 400981464}
   gameState: 0
-  SharedController: 0
+  SharedController: 1
   transitionTime: 1
   staticTime: 5
   decrementStaticTime: 0.1
