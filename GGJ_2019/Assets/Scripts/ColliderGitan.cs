@@ -21,7 +21,7 @@ public class ColliderGitan : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            other.gameObject.GetComponent<PlayerController>().PlayerDied();
+            other.gameObject.transform.parent.GetComponent<PlayerController>().PlayerDied();
         }
         if (other.tag == "Wall")
         {
