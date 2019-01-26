@@ -8,7 +8,8 @@ public class SFX : MonoBehaviour
 
     public void PlaySound(AudioClip clip)
     {
-        m_AudioSource.clip = clip;
+        if (clip != null)
+            m_AudioSource.clip = clip;
 
         StartCoroutine(PlayAndDestroy(clip.length));
     }
