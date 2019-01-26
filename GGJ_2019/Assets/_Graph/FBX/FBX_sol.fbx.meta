@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2e1e02eb3638ac04e937e4645180533c
+guid: f92bff6c4c0611e4094f0ae2d5684b2b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -16,7 +16,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Dalle_dessous_MAT
-    second: {fileID: 2100000, guid: 72219c4ea6ae3b2429b750ce322e1534, type: 2}
+    second: {fileID: 2100000, guid: 12db2f90234f17748aca3e3076357748, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
