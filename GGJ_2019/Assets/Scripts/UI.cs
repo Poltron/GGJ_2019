@@ -16,7 +16,6 @@ public class UI : MonoBehaviour
 
     void Start ()
     {
-        ResetScreen();
 	}
 
     public void ResetScreen()
@@ -24,8 +23,6 @@ public class UI : MonoBehaviour
         m_GameCanvas.SetActive(false);
         m_PauseCanvas.SetActive(false);
         m_EndCanvas.SetActive(false);
-
-        m_StartCanvas.SetActive(true);
     }
 
     public void DisplayGameCanvas()
