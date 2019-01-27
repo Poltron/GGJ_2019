@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -17,6 +18,9 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private Transform m_light;
 
     [SerializeField] private string[] sceneNames;
+
+    [SerializeField]
+    private GameObject m_EndRoundSFX;
 
     private StormSounds m_StormSounds;
 
@@ -46,7 +50,10 @@ public class GameManager : Singleton<GameManager>
 		if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             if (gameState == GameState.EndGame)
+            {
+                Instantiate(m_EndRoundSFX);
                 ReloadGame();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Escape) && gameState == GameState.Playing && Time.timeScale != 0)
@@ -76,6 +83,11 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale = 1;
 
         m_UI.ShowHidePauseCanvas();
+    }
+
+    public void BackToMainMen()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void EnablePlayer(bool enabled)
