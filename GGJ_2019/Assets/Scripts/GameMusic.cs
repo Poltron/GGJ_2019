@@ -46,11 +46,11 @@ public class GameMusic : MonoBehaviour
     {
         for (float timer = 0; timer < m_FadeDuration; timer += Time.deltaTime)
         {
-            m_GameAudioSource.volume = Mathf.Lerp(0, 1, timer / m_FadeDuration);
+            m_GameAudioSource.volume = Mathf.Lerp(0, 0.9f, timer / m_FadeDuration);
 
             yield return null;
         }
 
-        m_GameAudioSource.volume = 1;
+        m_GameAudioSource.volume = 0.9f;
     }
 }
