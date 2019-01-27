@@ -1232,15 +1232,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4818937258544386, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4818937258544386, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 3.22
+      value: 2.99
       objectReference: {fileID: 0}
     - target: {fileID: 4149793838416810, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059717518422238, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 3.1298
+      objectReference: {fileID: 0}
+    - target: {fileID: 4059717518422238, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 5.8445997
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2444c000da24bc4d9418a1e0d221088, type: 2}
@@ -1519,6 +1527,12 @@ MonoBehaviour:
   - {fileID: 18784016}
   m_UI: {fileID: 769362111}
   m_light: {fileID: 400981464}
+  sceneNames:
+  - LD1
+  - LD2
+  - LD4
+  - LD5
+  - LD6
   gameState: 0
   SharedController: 0
   timeBeforeTransition: 3
@@ -1846,6 +1860,10 @@ Prefab:
     - target: {fileID: 4867652067556374, guid: e72b058253e8df344a59dcf110350a8f, type: 2}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310720716095368, guid: e72b058253e8df344a59dcf110350a8f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -9.48
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e72b058253e8df344a59dcf110350a8f, type: 2}
