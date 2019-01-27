@@ -517,7 +517,6 @@ MonoBehaviour:
   m_PlayerDeathAudioClips:
   - {fileID: 8300000, guid: a8889132f39d95c42b0182139ef7b217, type: 3}
   - {fileID: 8300000, guid: f4fb1720d5c7bee45bf59d6ab2af399d, type: 3}
-  - {fileID: 8300000, guid: 8174247e6077cbb48a268206dad51d99, type: 3}
 --- !u!135 &135204508009453278
 SphereCollider:
   m_ObjectHideFlags: 1
