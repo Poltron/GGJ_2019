@@ -7,7 +7,6 @@ public class GameManager : Singleton<GameManager>
 {
     public enum GameState
     {
-        Menu,
         Playing,
         EndGame
     }
@@ -16,6 +15,8 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField] private UI m_UI;
     [SerializeField] private Transform m_light;
+
+    [SerializeField] private string[] sceneNames;
 
     private StormSounds m_StormSounds;
 
@@ -35,19 +36,16 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
-        
-        gameState = GameState.Menu;
-
         m_StormSounds = m_light.gameObject.GetComponent<StormSounds>();
+
+        StartGame();
     }
 
     void Update ()
     {
-		if (Input.GetKeyDown(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
-            if (gameState == GameState.Menu)
-                StartGame();
-            else if (gameState == GameState.EndGame)
+            if (gameState == GameState.EndGame)
                 StartGame();
         }
 
@@ -59,8 +57,6 @@ public class GameManager : Singleton<GameManager>
 
     public void StartGame()
     {
-        m_UI.DisplayGameCanvas();
-
         gameState = GameState.Playing;
         EnablePlayer(true);
 
@@ -143,7 +139,8 @@ public class GameManager : Singleton<GameManager>
 
     private void ReloadGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        int rdm = UnityEngine.Random.Range(0, sceneNames.Length - 1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneNames[rdm]);
     }
 
     private IEnumerator GoForNextMeteo(float t, int windSpawnerIndex, Action<int> callback)
