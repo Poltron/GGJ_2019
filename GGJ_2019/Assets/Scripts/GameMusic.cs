@@ -25,8 +25,7 @@ public class GameMusic : MonoBehaviour
 
         yield return new WaitForSeconds(m_FadeDuration / 3);
 
-        if (!m_GameAudioSource.isPlaying)
-            m_GameAudioSource.Play();
+        m_GameAudioSource.Play();
 
         StartCoroutine(FadeIn());
     }
@@ -39,6 +38,8 @@ public class GameMusic : MonoBehaviour
 
             yield return null;
         }
+
+        m_MenuAudioSource.volume = 0;
     }
 
     private IEnumerator FadeIn()
@@ -49,5 +50,7 @@ public class GameMusic : MonoBehaviour
 
             yield return null;
         }
+
+        m_GameAudioSource.volume = 1;
     }
 }
