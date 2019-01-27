@@ -98,8 +98,10 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         if (!IsActive)
+        {
+            _rigidBody.velocity = Vector3.zero;
             return;
-
+        }
         Vector3 movement = new Vector3(m_Velocity.x, 0, m_Velocity.y) * Speed * Time.deltaTime;
 
         _rigidBody.velocity = Vector3.zero;
