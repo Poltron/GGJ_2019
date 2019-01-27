@@ -60,7 +60,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1716366634052288
 GameObject:
   m_ObjectHideFlags: 0
@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 23651892593762468}
   - component: {fileID: 65790565662312448}
   - component: {fileID: 54956332296532046}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: Wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4059717518422238
 Transform:
   m_ObjectHideFlags: 1
@@ -361,7 +361,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.62274563, y: 2.7944653, z: 2.8756804}
+  m_Size: {x: 0.62274563, y: 2.7944653, z: 2.6}
   m_Center: {x: 0, y: 1.6037945, z: -1.4378402}
 --- !u!114 &114506146858714348
 MonoBehaviour:
