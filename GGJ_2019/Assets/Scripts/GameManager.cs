@@ -18,6 +18,9 @@ public class GameManager : Singleton<GameManager>
 
     [SerializeField] private string[] sceneNames;
 
+    [SerializeField]
+    private GameObject m_EndRoundSFX;
+
     private StormSounds m_StormSounds;
 
     public GameState gameState;
@@ -46,7 +49,10 @@ public class GameManager : Singleton<GameManager>
 		if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             if (gameState == GameState.EndGame)
+            {
+                Instantiate(m_EndRoundSFX);
                 ReloadGame();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Escape) && gameState == GameState.Playing && Time.timeScale != 0)
