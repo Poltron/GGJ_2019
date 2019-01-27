@@ -166,7 +166,11 @@ public class GameManager : Singleton<GameManager>
 
         m_light.GetComponentInChildren<Animator>().SetTrigger("Alert");
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(1);
+
+        m_StormSounds.PlayThunderSound();
+
+        yield return new WaitForSeconds(1.5f);
 
         callback(windSpawnerIndex);
     }
