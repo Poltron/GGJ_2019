@@ -92,11 +92,11 @@ public class GameManager : Singleton<GameManager>
         {
             if (controller.GetPlayerNumber() == Player.Player1)
             {
-                m_UI.WinnerWinnerChickenDinner("PLAYER 2", "RED");
+                m_UI.WinnerWinnerChickenDinner("PLAYER 2", "ORANGE");
             }
             else
             {
-                m_UI.WinnerWinnerChickenDinner("PLAYER 1", "BLUE");
+                m_UI.WinnerWinnerChickenDinner("PLAYER 1", "GREEN");
             }
 
             EndGame();
