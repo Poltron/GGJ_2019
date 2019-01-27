@@ -477,6 +477,12 @@ Prefab:
       propertyPath: m_GameMusic
       value: 
       objectReference: {fileID: 76192556}
+    - target: {fileID: 114039719789601310, guid: 23ae7aac3a8856f438e4924f3306739a,
+        type: 2}
+      propertyPath: m_LaunchSFX
+      value: 
+      objectReference: {fileID: 1205201306231776, guid: 50b167e6fa7b0bc4295540a8bcd46eb0,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23ae7aac3a8856f438e4924f3306739a, type: 2}
   m_IsPrefabAsset: 0

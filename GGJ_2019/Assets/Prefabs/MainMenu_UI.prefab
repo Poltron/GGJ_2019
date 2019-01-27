@@ -127,6 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GameMusic: {fileID: 114569375309634878, guid: c7df75528210af946b6d78eed697145e,
     type: 2}
+  m_LaunchSFX: {fileID: 1205201306231776, guid: 50b167e6fa7b0bc4295540a8bcd46eb0,
+    type: 2}
 --- !u!114 &114075163554039482
 MonoBehaviour:
   m_ObjectHideFlags: 1
