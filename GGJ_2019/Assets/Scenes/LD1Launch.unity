@@ -1806,8 +1806,10 @@ MonoBehaviour:
   - {fileID: 18784016}
   m_UI: {fileID: 769362111}
   m_light: {fileID: 400981464}
+  sceneNames:
+  - LD2
   gameState: 0
-  SharedController: 1
+  SharedController: 0
   timeBeforeTransition: 3
   transitionTime: 1
   staticTime: 5

@@ -46,7 +46,7 @@ public class GameManager : Singleton<GameManager>
 		if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
             if (gameState == GameState.EndGame)
-                StartGame();
+                ReloadGame();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape) && gameState == GameState.Playing && Time.timeScale != 0)
@@ -115,7 +115,7 @@ public class GameManager : Singleton<GameManager>
 
         EnablePlayer(false);
 
-        StartCoroutine(Timer(2.0f, ReloadGame));
+        //StartCoroutine(Timer(2.0f, ReloadGame));
     }
 
     public void TriggerMeteo(int windSpawnerIndex)
