@@ -1487,6 +1487,48 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1373295780}
   m_Script: {fileID: 11500000, guid: d1e14b98c6143a54b8e95c61092f94f5, type: 3}
+--- !u!1001 &846653706
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &869476489
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,6 +1850,11 @@ MonoBehaviour:
   m_light: {fileID: 400981464}
   sceneNames:
   - LD2
+  - LD3
+  - LD4
+  - LD5
+  - LD6
+  m_EndRoundSFX: {fileID: 0}
   gameState: 0
   SharedController: 0
   timeBeforeTransition: 3
