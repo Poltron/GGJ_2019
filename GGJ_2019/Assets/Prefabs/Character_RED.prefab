@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 136272774853904302}
   - component: {fileID: 54479628809493652}
   - component: {fileID: 114598836864210508}
+  - component: {fileID: 114625665199174592}
   m_Layer: 11
   m_Name: Character_RED
   m_TagString: Untagged
@@ -500,6 +501,23 @@ MonoBehaviour:
   _mesh: {fileID: 4688798425344676}
   m_PlayerNumber: 0
   IsActive: 1
+--- !u!114 &114625665199174592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1421509680145778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5130c0f81d66a94bb0ed29ef1eefe43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayerDeathSFXPrefab: {fileID: 1248325135011242, guid: 32194f57d378a18439d274fe730a0c85,
+    type: 2}
+  m_PlayerDeathAudioClips:
+  - {fileID: 8300000, guid: a8889132f39d95c42b0182139ef7b217, type: 3}
+  - {fileID: 8300000, guid: f4fb1720d5c7bee45bf59d6ab2af399d, type: 3}
+  - {fileID: 8300000, guid: 8174247e6077cbb48a268206dad51d99, type: 3}
 --- !u!135 &135204508009453278
 SphereCollider:
   m_ObjectHideFlags: 1
