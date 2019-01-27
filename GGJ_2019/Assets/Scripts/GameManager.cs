@@ -56,9 +56,12 @@ public class GameManager : Singleton<GameManager>
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && gameState == GameState.Playing && Time.timeScale != 0)
+        if (Input.GetKeyDown(KeyCode.Escape) && gameState == GameState.Playing)
         {
-            PauseGame();
+            if (Time.timeScale != 0)
+                PauseGame();
+            else
+                UnpauseGame();
         }
 	}
 
