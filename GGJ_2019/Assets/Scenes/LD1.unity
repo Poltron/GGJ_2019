@@ -1854,7 +1854,8 @@ MonoBehaviour:
   - LD4
   - LD5
   - LD6
-  m_EndRoundSFX: {fileID: 0}
+  m_EndRoundSFX: {fileID: 1205201306231776, guid: 72c514c1758b95e4b92e9facc39ac551,
+    type: 2}
   gameState: 0
   SharedController: 0
   timeBeforeTransition: 3

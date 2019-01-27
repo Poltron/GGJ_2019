@@ -9,9 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: fbe992b0f467ccc4cbfe31f4e2b6a70f
   - enabled: 1
-    path: Assets/Scenes/LD1Launch.unity
+    path: Assets/Scenes/LD1.unity
     guid: fb368d7a809ebdb4a86df012a89866e9
   - enabled: 1
     path: Assets/Scenes/LD2.unity
     guid: a7bef604753f1134a8d6a46e1980100e
+  - enabled: 1
+    path: Assets/Scenes/LD3.unity
+    guid: eb5e7febf2aee2b46be6dfe3cffc3264
+  - enabled: 1
+    path: Assets/Scenes/LD4.unity
+    guid: ac70e2819d83f444ca2a43b45dc3b9b4
+  - enabled: 1
+    path: Assets/Scenes/LD5.unity
+    guid: cf14ec6a69d3fb846b46ab2cff8ff9d0
+  - enabled: 1
+    path: Assets/Scenes/LD6.unity
+    guid: af73ba43c783cc145a4feb9e94a6bd0e
   m_configObjects: {}
