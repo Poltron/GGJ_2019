@@ -53,5 +53,7 @@ public class SFX : MonoBehaviour
         }
 
         m_AudioSource.Stop();
+
+        Destroy(gameObject);
     }
 }
