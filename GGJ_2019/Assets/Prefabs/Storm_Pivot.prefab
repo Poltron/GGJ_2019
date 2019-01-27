@@ -139,9 +139,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LigthSwitchSFXPrefab: {fileID: 1248325135011242, guid: 069b759ad23fca947a91c9bc999f896d,
     type: 2}
+  m_ThunderSFXPrefab: {fileID: 1248325135011242, guid: 8fad6f7c6f4df724dae62d8ffe3e3d8a,
+    type: 2}
   m_LightSwitchAudioClips:
   - {fileID: 8300000, guid: 8961d8a769f4b1149bad4304b9f1bdc7, type: 3}
   - {fileID: 8300000, guid: 432b9649b94072949b2c1b2bae7d29e7, type: 3}
   - {fileID: 8300000, guid: ca707e9ccda0cdf4ea621c72f541262b, type: 3}
   - {fileID: 8300000, guid: 78b73b5e17f55e442873d17ac01cfb2b, type: 3}
   - {fileID: 8300000, guid: 7ee6d037a74ad934389aebe06173a3ae, type: 3}
+  m_ThunderAudioClips:
+  - {fileID: 8300000, guid: ebb6bc0e26271574d8801bb4bc8765ca, type: 3}
+  - {fileID: 8300000, guid: cb1d1a8126b6e684bb474d33e9c82f35, type: 3}
+  - {fileID: 8300000, guid: 2cdd79e63cc7ddb4caaad2eda7dd073a, type: 3}
+  - {fileID: 8300000, guid: a2959117a4c973942b4b4177cc01c7fe, type: 3}
+  - {fileID: 8300000, guid: 66876b1911befdb4792a056e873977c1, type: 3}
