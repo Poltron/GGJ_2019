@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -82,6 +83,11 @@ public class GameManager : Singleton<GameManager>
         Time.timeScale = 1;
 
         m_UI.ShowHidePauseCanvas();
+    }
+
+    public void BackToMainMen()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void EnablePlayer(bool enabled)
