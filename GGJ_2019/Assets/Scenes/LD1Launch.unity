@@ -1807,7 +1807,7 @@ MonoBehaviour:
   m_UI: {fileID: 769362111}
   m_light: {fileID: 400981464}
   gameState: 0
-  SharedController: 0
+  SharedController: 1
   timeBeforeTransition: 3
   transitionTime: 1
   staticTime: 5
@@ -1858,6 +1858,11 @@ Prefab:
     - target: {fileID: 4322301670993358, guid: 7fc0dff39e1bbf14dbf5989cfeaab291, type: 2}
       propertyPath: m_RootOrder
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114598836864210508, guid: 7fc0dff39e1bbf14dbf5989cfeaab291,
+        type: 2}
+      propertyPath: Speed
+      value: 19000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fc0dff39e1bbf14dbf5989cfeaab291, type: 2}
@@ -2803,6 +2808,11 @@ Prefab:
     - target: {fileID: 4460214011046294, guid: 8d4b0405c44a4c64eaf2dabf222c7eaf, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114961772571784616, guid: 8d4b0405c44a4c64eaf2dabf222c7eaf,
+        type: 2}
+      propertyPath: Speed
+      value: 19000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d4b0405c44a4c64eaf2dabf222c7eaf, type: 2}
