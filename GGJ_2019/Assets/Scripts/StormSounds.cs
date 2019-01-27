@@ -14,7 +14,7 @@ public class StormSounds : MonoBehaviour
 
     [SerializeField] private AudioClip m_RainAudioClip;
 
-    [SerializeField] private float m_RainBuildupDuration = 1;
+    [SerializeField] private float m_RainBuildupDuration = 5;
 
     public void PlayLightSwitchSound()
     {

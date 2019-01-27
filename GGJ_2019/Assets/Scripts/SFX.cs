@@ -34,11 +34,24 @@ public class SFX : MonoBehaviour
 
     private IEnumerator StartRainLoop(float buildupDuration)
     {
+        m_AudioSource.Play();
+
         for (float timer = 0; timer <= buildupDuration; timer += Time.deltaTime)
         {
-            m_AudioSource.volume = Mathf.Lerp(0, 1, timer);
+            m_AudioSource.volume = Mathf.Lerp(0, 1, timer / buildupDuration);
 
             yield return null;
         }
+
+        yield return new WaitForSeconds(1.5f);
+
+        for (float timer = 0; timer <= 1.5f; timer += Time.deltaTime)
+        {
+            m_AudioSource.volume = Mathf.Lerp(1, 0, timer / 1.5f);
+
+            yield return null;
+        }
+
+        m_AudioSource.Stop();
     }
 }
