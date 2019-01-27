@@ -141,6 +141,8 @@ MonoBehaviour:
     type: 2}
   m_ThunderSFXPrefab: {fileID: 1248325135011242, guid: 8fad6f7c6f4df724dae62d8ffe3e3d8a,
     type: 2}
+  m_RainSFXPrefab: {fileID: 1248325135011242, guid: 53c71dea8c64891458fb52920f6f4ecf,
+    type: 2}
   m_LightSwitchAudioClips:
   - {fileID: 8300000, guid: 8961d8a769f4b1149bad4304b9f1bdc7, type: 3}
   - {fileID: 8300000, guid: 432b9649b94072949b2c1b2bae7d29e7, type: 3}
@@ -153,3 +155,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2cdd79e63cc7ddb4caaad2eda7dd073a, type: 3}
   - {fileID: 8300000, guid: a2959117a4c973942b4b4177cc01c7fe, type: 3}
   - {fileID: 8300000, guid: 66876b1911befdb4792a056e873977c1, type: 3}
+  m_RainAudioClip: {fileID: 8300000, guid: 5a53ebcad0be5364f8aaa35f472cf6ef, type: 3}
+  m_RainBuildupDuration: 1
