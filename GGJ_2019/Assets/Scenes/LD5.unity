@@ -1051,6 +1051,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &893293623
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!4 &935805989 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4981262606307548, guid: ba05823cba6a31a4b90acbf3eaa53c4b,
@@ -1424,6 +1466,7 @@ MonoBehaviour:
   - LD3
   - LD4
   - LD6
+  m_EndRoundSFX: {fileID: 0}
   gameState: 0
   SharedController: 0
   timeBeforeTransition: 3

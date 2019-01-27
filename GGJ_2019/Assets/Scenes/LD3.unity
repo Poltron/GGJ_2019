@@ -1533,6 +1533,7 @@ MonoBehaviour:
   - LD4
   - LD5
   - LD6
+  m_EndRoundSFX: {fileID: 0}
   gameState: 0
   SharedController: 0
   timeBeforeTransition: 3
@@ -1924,6 +1925,48 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4981262606307548, guid: ba05823cba6a31a4b90acbf3eaa53c4b,
     type: 2}
   m_PrefabInternal: {fileID: 1736822051}
+--- !u!1001 &1745693461
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1815528606
 Prefab:
   m_ObjectHideFlags: 0

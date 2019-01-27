@@ -1501,6 +1501,7 @@ MonoBehaviour:
   - LD3
   - LD5
   - LD6
+  m_EndRoundSFX: {fileID: 0}
   gameState: 0
   SharedController: 1
   timeBeforeTransition: 3
@@ -1856,6 +1857,48 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b0d0c9668c061b4daaaaa5745a43354, type: 3}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1585766322
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4102571633078086, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e710a62eb130d564cbe2742e35de1156, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &1644673320 stripped
 GameObject:
