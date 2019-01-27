@@ -55,9 +55,10 @@ GameObject:
   - component: {fileID: 136722449490348048}
   - component: {fileID: 54241231150363346}
   - component: {fileID: 114961772571784616}
+  - component: {fileID: 114674783209183836}
   m_Layer: 12
   m_Name: Character_GREEN
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -197,7 +198,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1451440479149624}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -2.7, y: -0.5, z: -1.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4493326063606368}
@@ -374,7 +375,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 9c0fccbd457703045ba09ae852be5d08, type: 2}
+  - {fileID: 2100000, guid: 6beaed5f3d23c4e4585adfbf33f61fa8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -485,6 +486,23 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114674783209183836
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1451440479149624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5130c0f81d66a94bb0ed29ef1eefe43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PlayerDeathSFXPrefab: {fileID: 1248325135011242, guid: 32194f57d378a18439d274fe730a0c85,
+    type: 2}
+  m_PlayerDeathAudioClips:
+  - {fileID: 8300000, guid: a8889132f39d95c42b0182139ef7b217, type: 3}
+  - {fileID: 8300000, guid: f4fb1720d5c7bee45bf59d6ab2af399d, type: 3}
+  - {fileID: 8300000, guid: 8174247e6077cbb48a268206dad51d99, type: 3}
 --- !u!114 &114961772571784616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -498,6 +516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 20000
   _mesh: {fileID: 4493326063606368}
+  _deathFX: {fileID: 198236430810269770}
   m_PlayerNumber: 1
   IsActive: 1
 --- !u!135 &135145474633992666
@@ -521,7 +540,7 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: f15aaa3b3958b9141905af1fef382c22, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.3
+  m_Radius: 0.39
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
@@ -537,7 +556,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
@@ -5088,7 +5107,7 @@ ParticleSystem:
   stopAction: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
