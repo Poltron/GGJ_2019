@@ -36,7 +36,7 @@ public class Item : MonoBehaviour
 
         m_LightFX.enabled = false;
         m_LifeFX.Stop();
-        m_EndFX.Play();
+        Instantiate(m_EndFX, transform.position, transform.rotation);
 
         owner.RemoveItem(this);
     }

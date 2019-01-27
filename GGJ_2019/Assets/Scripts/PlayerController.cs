@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     private Transform _transform;
 
     [SerializeField] private Transform _mesh;
+    [SerializeField] private ParticleSystem _deathFX;
 
     [SerializeField] private Player m_PlayerNumber;
     private List<Item> items;
@@ -58,6 +59,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log(gameObject.name + " died.");
 
         m_PlayerSounds.PlayPlayerDeathSound();
+        _deathFX.Play();
 
         GameManager.Instance.PlayerLost(this);
     }
