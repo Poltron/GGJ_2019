@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 0
   m_DefaultReflectionResolution: 128
   m_ReflectionBounces: 1
-  m_ReflectionIntensity: 1
+  m_ReflectionIntensity: 0.6
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4691441, g: 0.24160838, b: 0.5471685, a: 1}
+  m_IndirectSpecularColor: {r: 0.36865634, g: 0.18474329, b: 0.43172207, a: 0.6}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1717,6 +1717,7 @@ MonoBehaviour:
   m_light: {fileID: 400981464}
   sceneNames:
   - LD2
+  m_EndRoundSFX: {fileID: 0}
   gameState: 0
   SharedController: 0
   timeBeforeTransition: 3
