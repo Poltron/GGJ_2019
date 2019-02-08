@@ -56,9 +56,12 @@ public class GameManager : Singleton<GameManager>
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape) && gameState == GameState.Playing && Time.timeScale != 0)
+        if (Input.GetKeyDown(KeyCode.Escape) && gameState == GameState.Playing)
         {
-            PauseGame();
+            if (Time.timeScale != 0)
+                PauseGame();
+            else
+                UnpauseGame();
         }
 	}
 
@@ -104,11 +107,11 @@ public class GameManager : Singleton<GameManager>
         {
             if (controller.GetPlayerNumber() == Player.Player1)
             {
-                m_UI.WinnerWinnerChickenDinner("PLAYER 2", "ORANGE");
+                m_UI.WinnerWinnerChickenDinner("PLAYER 2", "GREEN");
             }
             else
             {
-                m_UI.WinnerWinnerChickenDinner("PLAYER 1", "GREEN");
+                m_UI.WinnerWinnerChickenDinner("PLAYER 1", "ORANGE");
             }
 
             EndGame();

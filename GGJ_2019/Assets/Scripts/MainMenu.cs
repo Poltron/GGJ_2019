@@ -19,7 +19,7 @@ public class MainMenu : MonoBehaviour
 
             m_GameMusic.SwitchToGameMusic();
 
-            SceneManager.LoadScene("LD1Launch");
+            SceneManager.LoadScene("LD1");
         }
 	}
 }
