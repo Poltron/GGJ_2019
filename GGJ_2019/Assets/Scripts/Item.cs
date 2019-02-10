@@ -9,7 +9,7 @@ public class Item : MonoBehaviour
     [SerializeField] private List<AudioClip> m_AudioClips;
 
     [SerializeField] private GameObject m_ItemSFXPrefab;
-
+    [SerializeField] private Animator m_LightAnimator;
     [SerializeField] private Light m_LightFX;
     [SerializeField] private ParticleSystem m_LifeFX;
     [SerializeField] private ParticleSystem m_EndFX;
@@ -21,6 +21,11 @@ public class Item : MonoBehaviour
         owner.AddItem(this);
 	}
 	
+    public void SetLastItem()
+    {
+        m_LightAnimator.SetTrigger("LastItem");
+    }
+
     public void Destroyed()
     {
         if (!m_IsAlive)

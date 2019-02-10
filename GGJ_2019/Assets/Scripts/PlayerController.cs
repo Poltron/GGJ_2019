@@ -47,10 +47,14 @@ public class PlayerController : MonoBehaviour
         items.Remove(item);
         Destroy(item.gameObject);
 
-        if (items.Count == 0)
+        if (items.Count == 1)
+        {
+            items[0].GetComponentInChildren<Animator>().SetTrigger("LastItem");
+        }
+        else if (items.Count == 0)
         {
             GameManager.Instance.PlayerLost(this);
-            Debug.Log(gameObject.name + " Died By No Items.");
+            Debug.Log(gameObject.name + " died By No Items.");
         }
     }
 

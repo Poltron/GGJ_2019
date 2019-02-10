@@ -13,6 +13,11 @@ public class UI : MonoBehaviour
 
     [Space]
     [SerializeField] private Text m_PlayerWinner;
+    [SerializeField] private Text m_Score;
+
+    [Space]
+    [SerializeField] private Color m_OrangeColor;
+    [SerializeField] private Color m_GreenColor;
 
     void Start ()
     {
@@ -44,8 +49,17 @@ public class UI : MonoBehaviour
         m_PauseCanvas.SetActive(!m_PauseCanvas.activeSelf);
     }
 
-    public void WinnerWinnerChickenDinner(string player, string color)
+    public void WinnerWinnerChickenDinner(Player player, string color)
     {
         m_PlayerWinner.text = color + " WON";
+        if (player == Player.Player1)
+            m_PlayerWinner.color = m_OrangeColor;
+        else
+            m_PlayerWinner.color = m_GreenColor;
+    }
+
+    public void SetScore(int orangeScore, int greenScore)
+    {
+        m_Score.text = orangeScore + " - " + greenScore;
     }
 }

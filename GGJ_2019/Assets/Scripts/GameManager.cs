@@ -45,7 +45,7 @@ public class GameManager : Singleton<GameManager>
         StartGame();
     }
 
-    void Update ()
+    private void Update ()
     {
 		if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button0))
         {
@@ -53,6 +53,14 @@ public class GameManager : Singleton<GameManager>
             {
                 Instantiate(m_EndRoundSFX);
                 ReloadGame();
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Joystick1Button1))
+        {
+            if (gameState == GameState.EndGame)
+            {
+                Instantiate(m_EndRoundSFX);
+                BackToMainMenu();
             }
         }
 
@@ -65,7 +73,7 @@ public class GameManager : Singleton<GameManager>
         }
 	}
 
-    public void StartGame()
+    private void StartGame()
     {
         gameState = GameState.Playing;
         EnablePlayer(true);
@@ -88,12 +96,13 @@ public class GameManager : Singleton<GameManager>
         m_UI.ShowHidePauseCanvas();
     }
 
-    public void BackToMainMen()
+    private void BackToMainMenu()
     {
+        GamePersistant.Instance.ResetScores();
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void EnablePlayer(bool enabled)
+    private void EnablePlayer(bool enabled)
     {
         foreach (PlayerController player in players)
         {
@@ -105,20 +114,25 @@ public class GameManager : Singleton<GameManager>
     {
         if (gameState == GameState.Playing)
         {
+            // player 1 lost
             if (controller.GetPlayerNumber() == Player.Player1)
             {
-                m_UI.WinnerWinnerChickenDinner("PLAYER 2", "GREEN");
+                m_UI.WinnerWinnerChickenDinner(Player.Player2, "GREEN");
+                GamePersistant.Instance.GreenScore++;
             }
+            // player 2 lost
             else
             {
-                m_UI.WinnerWinnerChickenDinner("PLAYER 1", "ORANGE");
+                m_UI.WinnerWinnerChickenDinner(Player.Player1, "ORANGE");
+                GamePersistant.Instance.OrangeScore++;
             }
 
+            m_UI.SetScore(GamePersistant.Instance.OrangeScore, GamePersistant.Instance.GreenScore);
             EndGame();
         }
     }
 
-    public void EndGame()
+    private void EndGame()
     {
         Debug.Log("end game.");
 
@@ -133,7 +147,7 @@ public class GameManager : Singleton<GameManager>
         //StartCoroutine(Timer(2.0f, ReloadGame));
     }
 
-    public void TriggerMeteo(int windSpawnerIndex)
+    private void TriggerMeteo(int windSpawnerIndex)
     {
         windSpawners[windSpawnerIndex].Spawn();
 
